@@ -49,7 +49,8 @@ char	*set_cmd(t_cmdinfo *cmd_info)
 			free(bin_to_path);
 			++i;
 		}
-		perror(cmd_info->cmd[0]);
+		if (i != 0)
+			perror(cmd_info->cmd[0]);
 	}
 	return (NULL);
 }
